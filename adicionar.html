@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Adicionar Item - Meu Álbum Digital</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="brand">
+      <img src="logo.png" alt="Logo Meu Álbum Digital" class="logo-img" />
+      <span class="brand-text">Meu Álbum Digital</span>
+    </a>
+  </header>
+
+  <main class="hero">
+    <h1>Adicionar Novo Item</h1>
+    <form class="filters">
+      <label>Nome do Item</label>
+      <input type="text" placeholder="Ex: Moeda de Prata" />
+
+      <label>Categoria</label>
+      <select>
+        <option>Moedas</option>
+        <option>Quadrinhos</option>
+        <option>Miniaturas</option>
+        <option>Selos</option>
+      </select>
+
+      <label>Raridade</label>
+      <select>
+        <option>Comum</option>
+        <option>Rara</option>
+        <option>Ultra rara</option>
+      </select>
+
+      <label>Imagem</label>
+      <input type="file" />
+
+      <button type="submit" class="btn-gold">Salvar Item</button>
+    </form>
+  </main>
+</body>
+</html>
