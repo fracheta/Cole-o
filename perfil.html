@@ -4,7 +4,113 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Perfil - Meu Álbum Digital</title>
+
+  <!-- Fonte Cinzel para títulos e Inter para texto -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Inter, sans-serif;
+      background: linear-gradient(180deg, #0a0a0a, #111);
+      color: rgba(255,255,255,0.85);
+      line-height: 1.6;
+    }
+    .site-header {
+      background: rgba(17,17,17,0.9);
+      border-bottom: 1px solid rgba(212,175,55,0.25);
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+    }
+    .logo-img {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      border: 2px solid rgba(212,175,55,0.4);
+      box-shadow: 0 0 12px rgba(212,175,55,0.3);
+      object-fit: cover;
+    }
+    .brand-text {
+      font-family: 'Cinzel', serif;
+      font-size: 1.25rem;
+      color: #e1c45a;
+      font-weight: 700;
+    }
+    .hero {
+      max-width: 800px;
+      margin: 3rem auto;
+      text-align: center;
+      padding: 2rem;
+      background: linear-gradient(180deg, rgba(22,22,22,0.85), rgba(14,14,14,0.85));
+      border: 1px solid rgba(212,175,55,0.25);
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    .hero h1 {
+      font-family: 'Cinzel', serif;
+      color: #e1c45a;
+      margin-bottom: 1rem;
+    }
+    .hero img {
+      margin: 1rem auto;
+      display: block;
+    }
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    .stat-card {
+      background: rgba(20,20,20,0.8);
+      border: 1px solid rgba(212,175,55,0.25);
+      border-radius: 12px;
+      padding: 1rem 1.5rem;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    }
+    .stat-card strong {
+      display: block;
+      font-family: 'Cinzel', serif;
+      color: #d4af37;
+      font-size: 1.2rem;
+    }
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .btn-gold, .btn-ghost {
+      padding: 0.75rem 1.25rem;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .btn-gold {
+      background: linear-gradient(180deg, #e1c45a, #d4af37);
+      color: #000;
+      border: 1px solid rgba(212,175,55,0.4);
+      box-shadow: 0 0 10px rgba(212,175,55,0.3);
+    }
+    .btn-gold:hover { transform: translateY(-2px); }
+    .btn-ghost {
+      background: transparent;
+      color: #e1c45a;
+      border: 1px solid rgba(212,175,55,0.4);
+    }
+    .btn-ghost:hover { box-shadow: 0 0 10px rgba(212,175,55,0.3); transform: translateY(-2px); }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -16,12 +122,26 @@
 
   <main class="hero">
     <h1>Perfil do Usuário</h1>
-    <img src="gabriel².png" alt="Foto do perfil" class="logo-img" />
+    <img src="gabriel².png" alt="Foto do perfil de Gabriel" class="logo-img" />
     <p><strong>Nome:</strong> Gabriel</p>
-    <p><strong>Itens:</strong> 42</p>
-    <p><strong>Categorias:</strong> 7</p>
-    <a href="catalogo.html" class="btn-gold">Ver Catálogo</a>
-    <a href="adicionar.html" class="btn-ghost">Adicionar Novo Item</a>
+
+    <!-- Estatísticas em cards -->
+    <div class="stats">
+      <div class="stat-card">
+        <strong>42</strong>
+        <span>Itens</span>
+      </div>
+      <div class="stat-card">
+        <strong>7</strong>
+        <span>Categorias</span>
+      </div>
+    </div>
+
+    <!-- Ações -->
+    <div class="hero-actions">
+      <a href="catalogo.html" class="btn-gold">Ver Catálogo</a>
+      <a href="adicionar.html" class="btn-ghost">Adicionar Novo Item</a>
+    </div>
   </main>
 </body>
 </html>
