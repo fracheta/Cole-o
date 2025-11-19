@@ -3,159 +3,25 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Meu Álbum Digital</title>
-
-  <!-- Fonte elegante: Cinzel (serif clássica) -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-
+  <title>Perfil - Meu Álbum Digital</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-  <!-- Imagem de fundo -->
-  <div class="bg-image" role="img" aria-label="Textura de mapa antigo em fundo escuro"></div>
-  <div class="bg-overlay"></div>
-
-  <!-- Cabeçalho com logo e perfil -->
   <header class="site-header">
-    <!-- Logo com imagem -->
-    <a href="index.html" class="brand" aria-label="Página inicial - Meu Álbum Digital">
+    <a href="index.html" class="brand">
       <img src="logo.png" alt="Logo Meu Álbum Digital" class="logo-img" />
-      <span class="brand-text">Seu espaço, suas memórias.</span>
+      <span class="brand-text">Meu Álbum Digital</span>
     </a>
-
-    <!-- Barra de pesquisa -->
-    <form class="search-bar" role="search" aria-label="Buscar itens">
-      <label for="q" class="visually-hidden">Buscar itens</label>
-      <input id="q" type="search" name="q" placeholder="Buscar por nome, categoria ou ano..." />
-      <button type="submit" class="btn-gold" aria-label="Pesquisar">
-        <span class="lupa" aria-hidden="true">⌕</span>
-      </button>
-    </form>
-
-    <!-- Perfil do usuário -->
-    <div class="profile">
-      <button onclick="location.href='perfil.html'" class="profile-btn" aria-haspopup="true" aria-expanded="false">
-        <img src="gabriel².png" alt="Foto do perfil do usuário" />
-        <div class="profile-info">
-          <strong class="profile-name">Gabriel</strong>
-          <span class="profile-stats">42 itens • 7 categorias</span>
-        </div>
-      </button>
-    </div>
   </header>
 
-  <main>
-    <!-- Hero / Slogan -->
-    <section class="hero">
-      <h1>Seu espaço, suas memórias</h1>
-      <p>Organize, registre e celebre suas coleções com elegância.</p>
-      <div class="hero-actions">
-        <a href="adicionar.html" class="btn-gold">Adicionar item</a>
-        <a href="exportar.html" class="btn-ghost">Exportar coleção</a>
-      </div>
-    </section>
-
-    <!-- Filtros -->
-    <section class="filters" aria-label="Filtros do catálogo">
-      <div class="filter-row">
-        <div class="filter">
-          <label for="cat">Categoria</label>
-          <select id="cat" name="categoria">
-            <option>Todas</option>
-            <option>Moedas</option>
-            <option>Quadrinhos</option>
-            <option>Miniaturas</option>
-            <option>Selos</option>
-          </select>
-        </div>
-        <div class="filter">
-          <label for="ano">Ano</label>
-          <select id="ano" name="ano">
-            <option>Todos</option>
-            <option>2025</option>
-            <option>2024</option>
-            <option>2023</option>
-            <option>Antigos</option>
-          </select>
-        </div>
-        <div class="filter">
-          <label for="rar">Raridade</label>
-          <select id="rar" name="raridade">
-            <option>Todas</option>
-            <option>Comum</option>
-            <option>Rara</option>
-            <option>Ultra rara</option>
-          </select>
-        </div>
-      </div>
-    </section>
-
-    <!-- Catálogo de itens -->
-    <section class="catalog" aria-label="Catálogo de itens">
-      <article class="item-card">
-        <div class="item-thumb">
-          <img src="https://images.unsplash.com/photo-1526045478516-99145907023c?q=80&w=640&auto=format&fit=crop" alt="Moeda antiga de prata com detalhes gravados" />
-        </div>
-        <div class="item-body">
-          <h3 class="item-title">Moeda de Prata - 1898</h3>
-          <ul class="item-meta">
-            <li><strong>Categoria:</strong> Moedas</li>
-            <li><strong>Aquisição:</strong> 12/08/2024</li>
-            <li><strong>Raridade:</strong> Rara</li>
-          </ul>
-          <p class="item-notes">Moeda com efígie detalhada; veio de um leilão de colecionadores.</p>
-          <div class="item-actions">
-            <a href="item.html" class="btn-ghost">Ver detalhes</a>
-            <a href="#" class="btn-gold">Favoritar</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="item-card">
-        <div class="item-thumb">
-          <img src="https://images.unsplash.com/photo-1542614471-0b8b2f9b5b38?q=80&w=640&auto=format&fit=crop" alt="Revista em quadrinhos com capa vintage" />
-        </div>
-        <div class="item-body">
-          <h3 class="item-title">HQ Edição Limitada #12</h3>
-          <ul class="item-meta">
-            <li><strong>Categoria:</strong> Quadrinhos</li>
-            <li><strong>Aquisição:</strong> 03/01/2025</li>
-            <li><strong>Raridade:</strong> Ultra rara</li>
-          </ul>
-          <p class="item-notes">Capa com verniz localizado; tiragem numerada.</p>
-          <div class="item-actions">
-            <a href="item.html" class="btn-ghost">Ver detalhes</a>
-            <a href="#" class="btn-gold">Favoritar</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="item-card">
-        <div class="item-thumb">
-          <img src="https://images.unsplash.com/photo-1610484826928-7b1a2d1617c7?q=80&w=640&auto=format&fit=crop" alt="Carro em miniatura metálico sobre fundo escuro" />
-        </div>
-        <div class="item-body">
-          <h3 class="item-title">Miniatura Clássica 1:64</h3>
-          <ul class="item-meta">
-            <li><strong>Categoria:</strong> Miniaturas</li>
-            <li><strong>Aquisição:</strong> 22/06/2023</li>
-            <li><strong>Raridade:</strong> Comum</li>
-          </ul>
-          <p class="item-notes">Pintura metálica impecável; modelo de 1970.</p>
-          <div class="item-actions">
-            <a href="item.html" class="btn-ghost">Ver detalhes</a>
-            <a href="#" class="btn-gold">Favoritar</a>
-          </div>
-        </div>
-      </article>
-    </section>
+  <main class="hero">
+    <h1>Perfil do Usuário</h1>
+    <img src="gabriel².png" alt="Foto do perfil" class="logo-img" />
+    <p><strong>Nome:</strong> Gabriel</p>
+    <p><strong>Itens:</strong> 42</p>
+    <p><strong>Categorias:</strong> 7</p>
+    <a href="catalogo.html" class="btn-gold">Ver Catálogo</a>
+    <a href="adicionar.html" class="btn-ghost">Adicionar Novo Item</a>
   </main>
-
-  <footer class="site-footer">
-    <p>© Meu Álbum Digital — Guarde suas coleções para sempre.</p>
-  </footer>
-
 </body>
 </html>
